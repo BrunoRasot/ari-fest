@@ -214,6 +214,17 @@
         outline: 2px solid var(--ink);
         box-shadow: 2px 2px 0 var(--ink);
       }
+      .countdown { width: min(100%, 410px); margin: 0 auto 40px; padding: 25px 15px 22px; background: #fffafa; border: 1.5px solid var(--ink); border-radius: 28px; }
+      .countdown h2 { margin: 0 0 19px; font-family: 'Bodoni Moda', serif; font-size: 1.65rem; }
+      .countdown-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px; }
+      .countdown-unit b { display: block; color: #dda3b4; font-family: 'Bodoni Moda', serif; font-size: clamp(1.7rem, 7vw, 2.35rem); line-height: 1; }
+      .countdown-unit span { display: block; margin-top: 8px; color: #8e8990; font-size: 0.53rem; font-weight: 700; letter-spacing: 0.08em; }
+      .memories { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; max-width: 480px; margin: 0 auto 38px; }
+      .memory { aspect-ratio: .78; margin: 0; overflow: hidden; border: 2px solid var(--ink); border-radius: 50% 50% 24px 24px; background: #ddd; box-shadow: 5px 5px 0 var(--rose); }
+      .memory:nth-child(2) { transform: translateY(24px); }
+      .memory img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.28); }
+      .family { margin: 0 auto 34px; max-width: 380px; font-family: 'Bodoni Moda', serif; font-size: 1.12rem; line-height: 1.45; }
+      .family small { display: block; margin-bottom: 6px; font-family: 'DM Sans', sans-serif; font-size: .63rem; font-weight: 700; letter-spacing: .15em; }
       .event {
         margin: 42px auto 0;
         padding: 0 8px;
@@ -346,34 +357,41 @@
       <p class="sub">MIS QUINCE AÑOS</p>
       <p class="intro">La pista se enciende y quiero celebrar esta noche inolvidable contigo.</p>
       <section class="calendar" aria-label="Calendario de la fiesta">
-        <div class="cal-top"><span>OCTUBRE</span><b>2027</b><span>✦</span></div>
+        <div class="cal-top"><span>NOVIEMBRE</span><b>2026</b><span>✦</span></div>
         <div class="cal-grid">
           <span class="weekday">LU</span><span class="weekday">MA</span
           ><span class="weekday">MI</span><span class="weekday">JU</span
           ><span class="weekday">VI</span><span class="weekday">SA</span
-          ><span class="weekday">DO</span> <span></span><span></span><span></span><span></span
-          ><span class="date">1</span><span class="date">2</span><span class="date">3</span>
-          <span class="date">4</span><span class="date">5</span><span class="date">6</span
-          ><span class="date">7</span><span class="date">8</span><span class="date">9</span
-          ><span class="date">10</span> <span class="date">11</span><span class="date">12</span
-          ><span class="date">13</span><span class="date">14</span><span class="date">15</span
-          ><span class="date">16</span><span class="date">17</span> <span class="date">18</span
-          ><span class="date">19</span><span class="date">20</span><span class="date">21</span
-          ><span class="date">22</span><span class="date">23</span
-          ><span class="date party">24</span> <span class="date">25</span
-          ><span class="date">26</span><span class="date">27</span><span class="date">28</span
-          ><span class="date">29</span><span class="date">30</span><span class="date">31</span>
+          ><span class="weekday">DO</span> <span></span><span></span><span></span><span></span><span></span><span></span
+          ><span class="date">1</span><span class="date">2</span><span class="date">3</span><span class="date">4</span><span class="date">5</span><span class="date">6</span><span class="date">7</span><span class="date">8</span>
+          <span class="date">9</span><span class="date">10</span><span class="date">11</span><span class="date">12</span><span class="date">13</span><span class="date party">14</span><span class="date">15</span>
+          <span class="date">16</span><span class="date">17</span><span class="date">18</span><span class="date">19</span><span class="date">20</span><span class="date">21</span><span class="date">22</span>
+          <span class="date">23</span><span class="date">24</span><span class="date">25</span><span class="date">26</span><span class="date">27</span><span class="date">28</span><span class="date">29</span><span class="date">30</span>
+        </div>
+      </section>
+      <section class="countdown" aria-label="Cuenta regresiva para la fiesta">
+        <h2>FALTAN!!</h2>
+        <div class="countdown-grid">
+          <div class="countdown-unit"><b id="days">00</b><span>DÍAS</span></div>
+          <div class="countdown-unit"><b id="hours">00</b><span>HORAS</span></div>
+          <div class="countdown-unit"><b id="minutes">00</b><span>MINUTOS</span></div>
+          <div class="countdown-unit"><b id="seconds">00</b><span>SEGUNDOS</span></div>
         </div>
       </section>
       <section class="event">
         <h2>Una noche para brillar</h2>
-        <p class="time">SÁBADO · 24 DE OCTUBRE · 8:00 P. M.</p>
+        <p class="time">SÁBADO · 14 DE NOVIEMBRE · 8:00 P. M.</p>
         <div class="divider"></div>
       </section>
+      <section class="memories" aria-label="Recuerdos de Ari">
+        <figure class="memory"><img src="assets/ari-recuerdo-1.png" alt="Ari de niña" /></figure>
+        <figure class="memory"><img src="assets/ari-recuerdo-2.png" alt="Ari de niña jugando" /></figure>
+      </section>
+      <p class="family"><small>CON EL CARIÑO DE SUS PADRES</small>Gabriela Escobedo Tapia<br />Christian Tagle Cabrera</p>
       <section class="details">
         <article class="detail">
           <h3>📍 UBICACIÓN</h3>
-          <p>Salón por confirmar<br /><small>Arequipa, Perú</small></p>
+          <p>Encuentra el lugar exacto<br /><small>Arequipa, Perú</small></p>
         </article>
         <article class="detail">
           <h3>✦ DRESS CODE</h3>
@@ -383,21 +401,21 @@
       <section class="actions" aria-label="Acciones de invitación">
         <a
           class="btn primary"
-          href="https://wa.me/51999999999?text=%C2%A1Hola!%20Confirmo%20mi%20asistencia%20a%20los%2015%20de%20Ari%20%F0%9F%AA%A9"
+          href="https://wa.me/51954719375?text=%C2%A1Hola!%20Confirmo%20mi%20asistencia%20a%20los%2015%20de%20Ari%20%F0%9F%AA%A9"
           target="_blank"
           rel="noreferrer"
           >CONFIRMAR POR WHATSAPP</a
         >
         <a
           class="btn secondary"
-          href="https://maps.google.com/?q=Arequipa,Peru"
+          href="https://maps.app.goo.gl/2P2xjvikCidjTvCx7"
           target="_blank"
           rel="noreferrer"
           >VER UBICACIÓN</a
         >
         <a
           class="btn"
-          href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=ARI+FEST+-+Mis+15+a%C3%B1os&dates=20271025T010000Z/20271025T060000Z&details=Una+noche+para+brillar"
+          href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=ARI+FEST+-+Mis+15+a%C3%B1os&dates=20261115T010000Z/20261115T060000Z&details=Una+noche+para+brillar"
           target="_blank"
           rel="noreferrer"
           >AGREGAR AL CALENDARIO</a
@@ -406,5 +424,19 @@
       <p class="note">Guarda la fecha y prepárate para bailar toda la noche. ✦</p>
       <div class="disco footer-disco"></div>
     </main>
+    <script>
+      const eventDate = new Date('2026-11-14T20:00:00-05:00');
+      const units = { days: 86400000, hours: 3600000, minutes: 60000, seconds: 1000 };
+      function updateCountdown() {
+        let remaining = Math.max(0, eventDate - new Date());
+        for (const [name, duration] of Object.entries(units)) {
+          const value = Math.floor(remaining / duration);
+          remaining %= duration;
+          document.getElementById(name).textContent = String(value).padStart(2, '0');
+        }
+      }
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    </script>
   </body>
 </html>
