@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Ari Fest · Mis quince años</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Great+Vibes&family=Oswald:wght@400;500;600&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="invitation">
+      <section class="hero">
+        <img class="disco disco-top" src="assets/boladisco.png" alt="Bola disco" />
+        <p class="eyebrow">Te invito</p>
+        <img class="logo" src="assets/logo.png" alt="Ari Fest" />
+        <h1>Mis quince años</h1>
+        <p class="intro">La pista se enciende y quiero celebrar esta noche inolvidable contigo.</p>
+        <img class="disco disco-right" src="assets/boladisco.png" alt="Bola disco" />
+      </section>
+
+      <section class="music" aria-label="Reproductor de música">
+        <span class="music-line"></span><span class="heart">♥</span><span class="music-line"></span>
+        <audio id="party-song" src="music/boggie.mp3" loop preload="metadata"></audio>
+        <button class="player-button" id="audio-toggle" type="button" aria-label="Reproducir música" aria-pressed="false">
+          <span id="play-icon">▶</span>
+        </button>
+        <p id="audio-state">Toca para escuchar la música</p>
+      </section>
+
+      <section class="celebration">
+        <img class="balloons" src="assets/globos.png" alt="Globos rosas" />
+        <img class="pink-disco" src="assets/boladisco2.png" alt="Bola disco rosa" />
+        <img class="ari" src="assets/aribb.png" alt="Ari celebra sus quince años" />
+        <img class="star star-one" src="assets/estrella.png" alt="" />
+        <img class="star star-two" src="assets/estrella.png" alt="" />
+      </section>
+
+      <section class="details">
+        <div class="glass">♢</div>
+        <p class="blessing">Con la bendición de Dios y de mis padres tengo el honor de invitarte a celebrar<br /><strong>mis XV años</strong></p>
+        <p class="month">NOVIEMBRE</p>
+        <div class="date-row"><div><span>SÁBADO</span></div><b>14</b><div><span>2026</span></div></div>
+        <p class="faltan">Faltan</p>
+        <div class="countdown" aria-live="polite"><strong id="countdown">00:00:00:00</strong><small>Días&nbsp;&nbsp;&nbsp;&nbsp; Horas&nbsp;&nbsp;&nbsp;&nbsp; Min&nbsp;&nbsp;&nbsp;&nbsp; Seg</small></div>
+        <div class="calendar" aria-label="Calendario de noviembre de 2026">
+          <header><small>NOVIEMBRE</small><small>2026</small></header>
+          <div class="week">DOM LUN MAR MIÉ JUE VIE SÁB</div>
+          <div class="days" id="calendar-days"></div>
+        </div>
+      </section>
+
+      <section class="venue">
+        <img src="assets/drink.png" alt="Copas rosadas" />
+        <div><strong>Recepción</strong><br />22:00 hrs<br />Salón de eventos</div>
+        <button id="location-button" type="button">Ver ubicación</button>
+        <p class="location-message" id="location-message" hidden>La ubicación se compartirá muy pronto.</p>
+      </section>
+
+      <section class="expectation"><p>Te esperamos</p></section>
+      <section class="dress"><img src="assets/dresscode.png" alt="Código de vestimenta" /><p>Temática Disco<br />Ropa de colores negro, plateado, dorado y otros<br />colores de acuerdo a la temática.</p></section>
+      <section class="rsvp"><span class="message">▣</span><button id="rsvp-button" type="button">CONFIRMAR TU ASISTENCIA</button><p id="rsvp-message" hidden>¡Gracias! Nos encantará celebrar contigo.</p></section>
+      <footer><span>★</span><img src="assets/perrito.png" alt="Figura de perro de globos plateado" /><span>💋</span></footer>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
