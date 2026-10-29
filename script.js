@@ -48,8 +48,17 @@ const days = document.getElementById('calendar-days');
 for (let day = 1; day <= 30; day++) { const el = document.createElement('span'); el.textContent = day; if (day === 14) el.className = 'selected'; days.append(el); }
 
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+const scrollToggle = document.getElementById('scroll-toggle');
+const scrollToggleLabel = document.getElementById('scroll-toggle-label');
+let autoScrollEnabled = true;
 let autoScrollPausedUntil = Date.now() + 1800;
 let previousFrameTime = 0;
+
+function updateScrollToggle() {
+  scrollToggle.setAttribute('aria-pressed', String(autoScrollEnabled));
+  scrollToggle.setAttribute('aria-label', autoScrollEnabled ? 'Pausar desplazamiento automático' : 'Iniciar desplazamiento automático');
+  scrollToggleLabel.textContent = autoScrollEnabled ? 'Auto' : 'Play';
+}
 
 function pauseAutoScroll() {
   autoScrollPausedUntil = Date.now() + 7000;
@@ -60,7 +69,7 @@ function autoScroll(timestamp) {
   const elapsed = timestamp - previousFrameTime;
   previousFrameTime = timestamp;
   const maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
-  if (!reducedMotion.matches && maxScroll > 0 && Date.now() > autoScrollPausedUntil) {
+  if (autoScrollEnabled && !reducedMotion.matches && maxScroll > 0 && Date.now() > autoScrollPausedUntil) {
     if (window.scrollY >= maxScroll - 1) {
       autoScrollPausedUntil = Date.now() + 2500;
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -72,4 +81,10 @@ function autoScroll(timestamp) {
 }
 
 ['touchstart', 'pointerdown', 'wheel', 'keydown'].forEach((eventName) => window.addEventListener(eventName, pauseAutoScroll, { passive: true }));
+scrollToggle.addEventListener('click', () => {
+  autoScrollEnabled = !autoScrollEnabled;
+  autoScrollPausedUntil = Date.now() + (autoScrollEnabled ? 500 : 0);
+  updateScrollToggle();
+});
+updateScrollToggle();
 window.requestAnimationFrame(autoScroll);
