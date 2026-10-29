@@ -46,6 +46,3 @@ updateCountdown(); setInterval(updateCountdown, 1000);
 
 const days = document.getElementById('calendar-days');
 for (let day = 1; day <= 30; day++) { const el = document.createElement('span'); el.textContent = day; if (day === 14) el.className = 'selected'; days.append(el); }
-
-document.getElementById('location-button').addEventListener('click', () => document.getElementById('location-message').hidden = false);
-document.getElementById('rsvp-button').addEventListener('click', () => document.getElementById('rsvp-message').hidden = false);
