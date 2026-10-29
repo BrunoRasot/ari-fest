@@ -169,50 +169,66 @@
         left: 25%;
       }
       .calendar {
-        margin: 285px auto 26px;
+        margin: 285px auto 18px;
         width: min(100%, 410px);
-        background: #fffdfd;
-        border: 2px solid var(--ink);
-        border-radius: 28px;
-        box-shadow: 8px 8px 0 var(--rose);
+        padding: 8px 16px 18px;
+        background: #fffdfdcc;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
         overflow: hidden;
       }
       .cal-top {
-        background: var(--ink);
-        color: white;
+        color: #777279;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 13px 22px;
-        letter-spacing: 0.15em;
-        font-size: 0.7rem;
+        padding: 2px 11px 9px;
+        border-bottom: 1px solid #aaa6aa;
+        letter-spacing: 0.12em;
+        font-size: 0.56rem;
         font-weight: bold;
       }
       .cal-top b {
-        color: var(--rose);
-        font-size: 0.9rem;
+        color: #777279;
+        font-size: 0.62rem;
       }
       .cal-grid {
-        padding: 18px 18px 20px;
+        padding: 12px 8px 0;
         display: grid;
         grid-template-columns: repeat(7, 1fr);
-        gap: 8px;
-        font-size: 0.78rem;
+        gap: 7px 5px;
+        font-size: 0.88rem;
       }
       .weekday {
         font-weight: 700;
-        color: #8e8990;
-        font-size: 0.62rem;
+        color: #5d595f;
+        font-size: 0.48rem;
       }
       .date {
-        padding: 7px 0;
+        position: relative;
+        padding: 3px 0;
       }
       .date.party {
-        background: var(--rose);
-        border-radius: 50%;
+        background: transparent;
+        border-radius: 0;
         font-weight: 700;
-        outline: 2px solid var(--ink);
-        box-shadow: 2px 2px 0 var(--ink);
+        outline: 0;
+        box-shadow: none;
+        color: #38343a;
+      }
+      .date.party::after {
+        content: '';
+        position: absolute;
+        width: 24px;
+        height: 20px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -53%) rotate(-12deg);
+        border: 2px solid #dca0b2;
+        border-radius: 48% 53% 50% 45%;
+        box-shadow: 2px -1px 0 -1px #dca0b2;
+        pointer-events: none;
       }
       .countdown { width: min(100%, 410px); margin: 0 auto 40px; padding: 25px 15px 22px; background: #fffafa; border: 1.5px solid var(--ink); border-radius: 28px; }
       .countdown h2 { margin: 0 0 19px; font-family: 'Bodoni Moda', serif; font-size: 1.65rem; }
