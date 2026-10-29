@@ -249,6 +249,30 @@
       .mini-disco::after { content: '✦'; position: absolute; inset: 24px 0; color: #fff; text-shadow: 0 0 4px #333; }
       .family { margin: 0 auto 34px; max-width: 380px; font-family: 'Bodoni Moda', serif; font-size: 1.12rem; line-height: 1.45; }
       .family small { display: block; margin-bottom: 6px; font-family: 'DM Sans', sans-serif; font-size: .63rem; font-weight: 700; letter-spacing: .15em; }
+      .calendar { display: none; }
+      .invitation-copy { max-width: 335px; margin: 26px auto 24px; font-size: 1.04rem; line-height: 1.25; }
+      .invitation-copy b { font-family: 'Bodoni Moda', serif; }
+      .date-panel { width: min(100%, 390px); margin: 0 auto 20px; }
+      .date-panel .month { margin: 0 0 11px; font-family: 'Bodoni Moda', serif; font-size: 1.55rem; }
+      .date-line { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 11px; }
+      .date-line span { border-top: 2px solid #d8a0b2; border-bottom: 2px solid #d8a0b2; padding: 2px 0; font-family: 'Bodoni Moda', serif; font-size: 1.14rem; }
+      .date-line b { color: #dea2b6; font-family: 'Bodoni Moda', serif; font-size: 4.25rem; font-weight: 700; line-height: .85; transform: rotate(-10deg); }
+      .countdown { border: 0; border-radius: 0; background: transparent; padding: 0 0 30px; }
+      .countdown h2 { color: #dfa0b7; font-size: 1.7rem; font-weight: 700; margin-bottom: 16px; }
+      .countdown-unit b { color: var(--ink); font-family: 'DM Sans', sans-serif; font-size: clamp(1.6rem, 8vw, 2.9rem); font-weight: 500; letter-spacing: -.11em; }
+      .countdown-unit span { color: #d49aad; font-size: .58rem; }
+      .reception { margin: -7px auto 32px; font-size: .84rem; line-height: 1.48; }
+      .reception b { display: block; font-size: .92rem; }
+      .memories { height: 390px; background: #d9d9d9; border-radius: 0; }
+      .memories::before { width: 105px; height: 105px; left: -21px; top: 8px; box-shadow: inset 0 0 0 8px #bcbac0, 0 4px 10px #5557; }
+      .memories::after { right: -1px; top: 42px; font-size: 43px; }
+      .memory:first-child { width: 145px; height: 204px; left: 92px; top: 84px; border: 4px solid #fff; border-bottom-color: #e59ab6; border-radius: 74px 74px 8px 8px; box-shadow: none; }
+      .memory:nth-child(2) { width: 86px; height: 86px; right: 16px; bottom: 17px; border: 3px solid #fff; box-shadow: 4px 5px 0 #e4a0b7; }
+      .memory:first-child::before { left: 47px; }
+      .scene-title { bottom: 71px; font-size: 2.15rem; }
+      .scene-title small { margin-top: 4px; font-size: 1.4rem; }
+      .mini-disco { right: 50px; bottom: 111px; width: 69px; height: 69px; }
+      .mini-disco::after { inset: 18px 0; }
       .event {
         margin: 42px auto 0;
         padding: 0 8px;
@@ -374,12 +398,11 @@
       <div class="disco d3"></div>
       <div class="disco d4"></div>
       <span class="star s1">✦</span><span class="star s2">✦</span><span class="star s3">✦</span>
-      <p class="eyebrow">YOU'RE INVITED</p>
-      <h1>
-        <span><i class="pink-hat">🪩</i>ARI</span><span>FEST</span>
-      </h1>
-      <p class="sub">MIS QUINCE AÑOS</p>
-      <p class="intro">La pista se enciende y quiero celebrar esta noche inolvidable contigo.</p>
+      <p class="invitation-copy">Con la bendición de Dios y de mis padres tengo el honor de invitarte a celebrar<br /><b>mis XV años.</b></p>
+      <section class="date-panel" aria-label="Fecha de la celebración">
+        <p class="month">NOVIEMBRE</p>
+        <div class="date-line"><span>SÁBADO</span><b>14</b><span>2026</span></div>
+      </section>
       <section class="calendar" aria-label="Calendario de la fiesta">
         <div class="cal-top"><span>NOVIEMBRE</span><b>2026</b><span>✦</span></div>
         <div class="cal-grid">
@@ -394,7 +417,7 @@
         </div>
       </section>
       <section class="countdown" aria-label="Cuenta regresiva para la fiesta">
-        <h2>FALTAN!!</h2>
+        <h2>Faltan...</h2>
         <div class="countdown-grid">
           <div class="countdown-unit"><b id="days">00</b><span>DÍAS</span></div>
           <div class="countdown-unit"><b id="hours">00</b><span>HORAS</span></div>
@@ -402,10 +425,10 @@
           <div class="countdown-unit"><b id="seconds">00</b><span>SEGUNDOS</span></div>
         </div>
       </section>
-      <section class="event">
-        <h2>Una noche para brillar</h2>
-        <p class="time">SÁBADO · 14 DE NOVIEMBRE · 8:00 P. M.</p>
-        <div class="divider"></div>
+      <section class="reception">
+        <b>Recepción</b>
+        <div>21:00 hrs</div>
+        <div>Salón de eventos</div>
       </section>
       <section class="memories" aria-label="Recuerdos de Ari">
         <figure class="memory"><img src="assets/ari-recuerdo-1.png" alt="Ari de niña" /></figure>
@@ -414,16 +437,6 @@
         <span class="mini-disco" aria-hidden="true"></span>
       </section>
       <p class="family"><small>CON EL CARIÑO DE SUS PADRES</small>Gabriela Escobedo Tapia<br />Christian Tagle Cabrera</p>
-      <section class="details">
-        <article class="detail">
-          <h3>📍 UBICACIÓN</h3>
-          <p>Encuentra el lugar exacto<br /><small>Arequipa, Perú</small></p>
-        </article>
-        <article class="detail">
-          <h3>✦ DRESS CODE</h3>
-          <p>Disco glam<br /><small>¡Ven a brillar!</small></p>
-        </article>
-      </section>
       <section class="actions" aria-label="Acciones de invitación">
         <a
           class="btn primary"
@@ -441,7 +454,7 @@
         >
         <a
           class="btn"
-          href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=ARI+FEST+-+Mis+15+a%C3%B1os&dates=20261115T010000Z/20261115T060000Z&details=Una+noche+para+brillar"
+          href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=ARI+FEST+-+Mis+15+a%C3%B1os&dates=20261115T020000Z/20261115T070000Z&details=Una+noche+para+brillar"
           target="_blank"
           rel="noreferrer"
           >AGREGAR AL CALENDARIO</a
@@ -451,7 +464,7 @@
       <div class="disco footer-disco"></div>
     </main>
     <script>
-      const eventDate = new Date('2026-11-14T20:00:00-05:00');
+      const eventDate = new Date('2026-11-14T21:00:00-05:00');
       const units = { days: 86400000, hours: 3600000, minutes: 60000, seconds: 1000 };
       function updateCountdown() {
         let remaining = Math.max(0, eventDate - new Date());
