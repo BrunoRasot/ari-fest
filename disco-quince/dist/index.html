@@ -235,10 +235,18 @@
       .countdown-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px; }
       .countdown-unit b { display: block; color: #dda3b4; font-family: 'Bodoni Moda', serif; font-size: clamp(1.7rem, 7vw, 2.35rem); line-height: 1; }
       .countdown-unit span { display: block; margin-top: 8px; color: #8e8990; font-size: 0.53rem; font-weight: 700; letter-spacing: 0.08em; }
-      .memories { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; max-width: 480px; margin: 0 auto 38px; }
-      .memory { aspect-ratio: .78; margin: 0; overflow: hidden; border: 2px solid var(--ink); border-radius: 50% 50% 24px 24px; background: #ddd; box-shadow: 5px 5px 0 var(--rose); }
-      .memory:nth-child(2) { transform: translateY(24px); }
+      .memories { position: relative; width: min(100%, 340px); height: 455px; margin: 0 auto 38px; overflow: hidden; background: #d8d8d8; border-radius: 4px; isolation: isolate; }
+      .memories::before { content: ''; position: absolute; z-index: -1; width: 128px; height: 128px; left: -35px; top: 10px; border-radius: 50%; background: conic-gradient(#f7f7f7,#646267,#eee,#47454a,#f7f7f7); box-shadow: inset 0 0 0 9px #bcbac0, 0 4px 10px #5557; }
+      .memories::after { content: '●\A ●  ●\A   ●  ●\A ●'; white-space: pre; position: absolute; right: 8px; top: 52px; color: #e49ab6; font-size: 51px; line-height: .72; letter-spacing: -12px; opacity: .78; text-shadow: 2px 2px 2px #8d537066; transform: rotate(-12deg); }
+      .memory { position: absolute; z-index: 1; margin: 0; overflow: hidden; background: #ddd; box-shadow: 5px 5px 0 #e4a0b7; }
+      .memory:first-child { width: 163px; height: 236px; left: 84px; top: 93px; border: 4px solid #f2f2f2; border-radius: 82px 82px 8px 8px; }
+      .memory:nth-child(2) { width: 93px; height: 112px; right: 18px; bottom: 20px; border: 4px solid #f2f2f2; border-radius: 50%; }
+      .memory:first-child::before { content: ''; position: absolute; z-index: 2; width: 49px; height: 42px; left: 55px; top: -4px; clip-path: polygon(50% 0, 100% 100%, 0 100%); background: repeating-linear-gradient(70deg, #f6b2c6 0 5px, #fce5ec 5px 8px); filter: drop-shadow(0 1px 0 #92546a); }
       .memory img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.28); }
+      .scene-title { position: absolute; z-index: 3; left: 0; right: 0; bottom: 109px; color: #dfa0b7; font-family: 'Bodoni Moda', serif; font-weight: 800; font-size: 2.55rem; line-height: .78; letter-spacing: -.08em; text-shadow: 1px 2px 0 #754c5b; }
+      .scene-title small { display: block; margin-top: 8px; font-size: 1.85rem; }
+      .mini-disco { position: absolute; z-index: 2; right: 8px; bottom: 120px; width: 86px; height: 86px; border-radius: 50%; background: conic-gradient(#eee,#68666b,#f5f5f5,#555359,#eee); box-shadow: inset 0 0 0 7px #c0bec2; }
+      .mini-disco::after { content: '✦'; position: absolute; inset: 24px 0; color: #fff; text-shadow: 0 0 4px #333; }
       .family { margin: 0 auto 34px; max-width: 380px; font-family: 'Bodoni Moda', serif; font-size: 1.12rem; line-height: 1.45; }
       .family small { display: block; margin-bottom: 6px; font-family: 'DM Sans', sans-serif; font-size: .63rem; font-weight: 700; letter-spacing: .15em; }
       .event {
@@ -402,6 +410,8 @@
       <section class="memories" aria-label="Recuerdos de Ari">
         <figure class="memory"><img src="assets/ari-recuerdo-1.png" alt="Ari de niña" /></figure>
         <figure class="memory"><img src="assets/ari-recuerdo-2.png" alt="Ari de niña jugando" /></figure>
+        <span class="scene-title">ARI<small>15</small></span>
+        <span class="mini-disco" aria-hidden="true"></span>
       </section>
       <p class="family"><small>CON EL CARIÑO DE SUS PADRES</small>Gabriela Escobedo Tapia<br />Christian Tagle Cabrera</p>
       <section class="details">
