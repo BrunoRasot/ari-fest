@@ -14,6 +14,11 @@ toggle.addEventListener('click', async () => {
   else { audio.pause(); updatePlayer(false); }
 });
 audio.addEventListener('ended', () => updatePlayer(false));
+document.getElementById('restart-button').addEventListener('click', () => { audio.currentTime = 0; });
+document.getElementById('repeat-button').addEventListener('click', (event) => {
+  audio.loop = !audio.loop;
+  event.currentTarget.style.opacity = audio.loop ? '1' : '.45';
+});
 
 const target = new Date('2026-11-14T22:00:00-05:00');
 function updateCountdown() {

@@ -22,11 +22,16 @@
       </section>
 
       <section class="music" aria-label="Reproductor de música">
-        <span class="music-line"></span><span class="heart">♥</span><span class="music-line"></span>
         <audio id="party-song" src="music/boggie.mp3" loop preload="metadata"></audio>
-        <button class="player-button" id="audio-toggle" type="button" aria-label="Reproducir música" aria-pressed="false">
-          <span id="play-icon">▶</span>
-        </button>
+        <span class="heart" aria-hidden="true">♥</span>
+        <div class="progress" aria-hidden="true"><span></span></div>
+        <div class="player-controls">
+          <button class="control" id="restart-button" type="button" aria-label="Reiniciar canción">↻</button>
+          <span class="control skip" aria-hidden="true">◀</span>
+          <button class="player-button" id="audio-toggle" type="button" aria-label="Reproducir música" aria-pressed="false"><span id="play-icon">▶</span></button>
+          <span class="control skip next" aria-hidden="true">▶</span>
+          <button class="control" id="repeat-button" type="button" aria-label="Activar o desactivar repetición">↪</button>
+        </div>
         <p id="audio-state">Toca para escuchar la música</p>
       </section>
 
