@@ -3,6 +3,21 @@ const toggle = document.getElementById('audio-toggle');
 const icon = document.getElementById('play-icon');
 const state = document.getElementById('audio-state');
 
+function fitInvitationToMobile() {
+  const artboardWidth = 328;
+  const artboardHeight = 2559;
+  if (window.innerWidth <= 480) {
+    const scale = window.innerWidth / artboardWidth;
+    document.documentElement.style.setProperty('--invitation-scale', scale);
+    document.documentElement.style.setProperty('--invitation-height', `${artboardHeight * scale}px`);
+  } else {
+    document.documentElement.style.removeProperty('--invitation-scale');
+    document.documentElement.style.removeProperty('--invitation-height');
+  }
+}
+fitInvitationToMobile();
+window.addEventListener('resize', fitInvitationToMobile);
+
 function updatePlayer(playing) {
   icon.textContent = '';
   toggle.setAttribute('aria-label', playing ? 'Pausar música' : 'Reproducir música');

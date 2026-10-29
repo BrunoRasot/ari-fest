@@ -15,4 +15,5 @@ section { position:relative; }
 .rsvp { height:215px; padding-top:30px; }.message { display:block; width:38px; height:auto; margin:0 auto -12px; }.rsvp button { background:#f8e9f5; border:1px solid #ba78a8; border-radius:7px; height:62px; width:254px; font:16px "Bebas Neue",sans-serif; letter-spacing:.4px; cursor:pointer; }.rsvp button:hover { background:#f3d9ed; }.rsvp p { color:#ad6d96; font-size:11px; margin:7px; }
 footer { height:176px; display:flex; align-items:center; justify-content:space-around; } footer .dog { width:105px; } footer .purple-star { width:55px; transform:rotate(-15deg); } footer .kiss { width:69px; }
 button:focus-visible { outline:3px solid #333; outline-offset:3px; }
-@media (min-width:560px) { body { padding:30px; }.invitation { box-shadow:0 4px 28px #0008; } }
+@media (max-width:480px) { body { background:#fff; min-height:var(--invitation-height, 2559px); }.invitation { position:absolute; top:0; left:0; margin:0; transform:scale(var(--invitation-scale, 1)); transform-origin:top left; } }
+@media (min-width:481px) { body { padding:30px; }.invitation { box-shadow:0 4px 28px #0008; } }
