@@ -5,7 +5,7 @@ const state = document.getElementById('audio-state');
 
 function fitInvitationToMobile() {
   const artboardWidth = 328;
-  const artboardHeight = 2559;
+  const artboardHeight = 2659;
   if (window.innerWidth <= 480) {
     const scale = window.innerWidth / artboardWidth;
     document.documentElement.style.setProperty('--invitation-scale', scale);
