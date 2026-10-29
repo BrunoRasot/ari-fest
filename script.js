@@ -22,7 +22,7 @@ function updatePlayer(playing) {
   icon.textContent = '';
   toggle.setAttribute('aria-label', playing ? 'Pausar música' : 'Reproducir música');
   toggle.setAttribute('aria-pressed', String(playing));
-  state.textContent = playing ? 'Pausar música' : 'Toca para escuchar la música';
+  state.textContent = '';
 }
 toggle.addEventListener('click', async () => {
   if (audio.paused) { try { await audio.play(); updatePlayer(true); } catch { state.textContent = 'No se pudo iniciar el audio.'; } }
