@@ -23,14 +23,13 @@
 
       <section class="music" aria-label="Reproductor de música">
         <audio id="party-song" src="music/boggie.mp3" loop preload="metadata"></audio>
-        <span class="heart" aria-hidden="true">♥</span>
-        <div class="progress" aria-hidden="true"><span></span></div>
+        <img class="music-controls-art" src="assets/music-controls.png" alt="" aria-hidden="true" />
         <div class="player-controls">
-          <button class="control" id="restart-button" type="button" aria-label="Reiniciar canción">↻</button>
-          <span class="control skip" aria-hidden="true">◀</span>
-          <button class="player-button" id="audio-toggle" type="button" aria-label="Reproducir música" aria-pressed="false"><span id="play-icon">▶</span></button>
-          <span class="control skip next" aria-hidden="true">▶</span>
-          <button class="control" id="repeat-button" type="button" aria-label="Activar o desactivar repetición">↪</button>
+          <button class="control restart" id="restart-button" type="button" aria-label="Reiniciar canción"></button>
+          <button class="control previous" type="button" aria-label="Volver al inicio de la canción"></button>
+          <button class="player-button" id="audio-toggle" type="button" aria-label="Reproducir música" aria-pressed="false"><span id="play-icon" aria-hidden="true"></span></button>
+          <button class="control next" type="button" aria-label="Avanzar canción"></button>
+          <button class="control repeat" id="repeat-button" type="button" aria-label="Activar o desactivar repetición"></button>
         </div>
         <p id="audio-state">Toca para escuchar la música</p>
       </section>

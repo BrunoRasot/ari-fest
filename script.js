@@ -4,7 +4,7 @@ const icon = document.getElementById('play-icon');
 const state = document.getElementById('audio-state');
 
 function updatePlayer(playing) {
-  icon.textContent = playing ? '❚❚' : '▶';
+  icon.textContent = '';
   toggle.setAttribute('aria-label', playing ? 'Pausar música' : 'Reproducir música');
   toggle.setAttribute('aria-pressed', String(playing));
   state.textContent = playing ? 'Pausar música' : 'Toca para escuchar la música';
