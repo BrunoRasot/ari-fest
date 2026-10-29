@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f8f4f5" />
+    <title>ARI FEST · Mis 15</title>
+    <meta name="description" content="Invitación disco a los 15 años de Ari." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,700;6..96,800&family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #171519;
+        --rose: #f4b7c7;
+        --soft: #fcf8f9;
+        --silver: #bab8bd;
+        --line: #dedade;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        color: var(--ink);
+        font-family: 'DM Sans', sans-serif;
+        background: radial-gradient(circle at 15% 12%, #fff 0 8%, transparent 25%), var(--soft);
+        overflow-x: hidden;
+      }
+      .sparkles {
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0.43;
+        background-image:
+          radial-gradient(#a9a5ab 1px, transparent 1.8px),
+          radial-gradient(#fff 1px, transparent 1.8px);
+        background-size:
+          41px 49px,
+          73px 64px;
+        background-position:
+          5px 18px,
+          29px 34px;
+      }
+      .page {
+        position: relative;
+        width: min(100%, 650px);
+        margin: auto;
+        padding: 28px 22px 52px;
+        text-align: center;
+      }
+      .eyebrow {
+        letter-spacing: 0.22em;
+        font-size: 0.69rem;
+        font-weight: 700;
+        margin: 18px 0 10px;
+      }
+      h1 {
+        font-family: 'Bodoni Moda', serif;
+        font-size: clamp(4.5rem, 20vw, 7.5rem);
+        line-height: 0.75;
+        letter-spacing: -0.075em;
+        margin: 18px 0 8px;
+      }
+      h1 span {
+        display: block;
+      }
+      .pink-hat {
+        display: inline-block;
+        font-size: 3rem;
+        transform: translate(-76px, 20px) rotate(-12deg);
+        margin-right: -0.7em;
+      }
+      .sub {
+        font-size: 0.83rem;
+        letter-spacing: 0.18em;
+        font-weight: 700;
+        margin: 22px 0 0;
+      }
+      .intro {
+        font-family: 'Bodoni Moda', serif;
+        font-weight: 700;
+        font-size: 1.3rem;
+        line-height: 1.35;
+        margin: 34px auto 8px;
+        max-width: 315px;
+      }
+      .disco {
+        position: absolute;
+        border-radius: 50%;
+        background: conic-gradient(
+          from 11deg,
+          #e7e6e8,
+          #79777d,
+          #f8f8f9,
+          #8d8b91,
+          #fff,
+          #77757b,
+          #ebeaed
+        );
+        box-shadow:
+          0 7px 19px #6c687630,
+          inset 0 0 0 8px #ecebef;
+        overflow: hidden;
+      }
+      .disco:before {
+        content: '';
+        position: absolute;
+        inset: 8%;
+        border-radius: 50%;
+        background:
+          repeating-linear-gradient(0deg, transparent 0 10px, #4f4d541e 11px 12px),
+          repeating-linear-gradient(90deg, transparent 0 10px, #4f4d541e 11px 12px);
+      }
+      .disco:after {
+        content: '✦';
+        position: absolute;
+        color: #fff;
+        text-shadow: 0 0 7px #4e4c52;
+        font-size: 2rem;
+        inset: 35% 0;
+      }
+      .d1 {
+        width: 140px;
+        height: 140px;
+        top: 52px;
+        left: -42px;
+        transform: rotate(-14deg);
+      }
+      .d2 {
+        width: 95px;
+        height: 95px;
+        top: 28px;
+        right: -21px;
+      }
+      .d3 {
+        width: 165px;
+        height: 165px;
+        top: 420px;
+        left: -58px;
+      }
+      .d4 {
+        width: 120px;
+        height: 120px;
+        top: 443px;
+        right: -28px;
+      }
+      .star {
+        position: absolute;
+        color: #222025;
+        font-size: 26px;
+      }
+      .s1 {
+        top: 176px;
+        left: 12%;
+      }
+      .s2 {
+        top: 310px;
+        right: 9%;
+      }
+      .s3 {
+        top: 440px;
+        left: 25%;
+      }
+      .calendar {
+        margin: 285px auto 26px;
+        width: min(100%, 410px);
+        background: #fffdfd;
+        border: 2px solid var(--ink);
+        border-radius: 28px;
+        box-shadow: 8px 8px 0 var(--rose);
+        overflow: hidden;
+      }
+      .cal-top {
+        background: var(--ink);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 13px 22px;
+        letter-spacing: 0.15em;
+        font-size: 0.7rem;
+        font-weight: bold;
+      }
+      .cal-top b {
+        color: var(--rose);
+        font-size: 0.9rem;
+      }
+      .cal-grid {
+        padding: 18px 18px 20px;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 8px;
+        font-size: 0.78rem;
+      }
+      .weekday {
+        font-weight: 700;
+        color: #8e8990;
+        font-size: 0.62rem;
+      }
+      .date {
+        padding: 7px 0;
+      }
+      .date.party {
+        background: var(--rose);
+        border-radius: 50%;
+        font-weight: 700;
+        outline: 2px solid var(--ink);
+        box-shadow: 2px 2px 0 var(--ink);
+      }
+      .event {
+        margin: 42px auto 0;
+        padding: 0 8px;
+      }
+      .event h2,
+      .details h2 {
+        font-family: 'Bodoni Moda', serif;
+        font-size: 2rem;
+        margin: 0 0 10px;
+      }
+      .event p {
+        margin: 4px 0;
+      }
+      .time {
+        font-weight: 700;
+        letter-spacing: 0.1em;
+      }
+      .divider {
+        width: 100px;
+        height: 3px;
+        background: var(--rose);
+        margin: 27px auto;
+      }
+      .details {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 11px;
+        max-width: 480px;
+        margin: 0 auto 40px;
+      }
+      .detail {
+        border: 1.5px solid var(--ink);
+        border-radius: 18px;
+        padding: 19px 13px;
+        background: #fffafa;
+      }
+      .detail h3 {
+        margin: 0 0 7px;
+        font-size: 0.78rem;
+        letter-spacing: 0.13em;
+      }
+      .detail p {
+        margin: 0;
+        font-size: 0.86rem;
+        line-height: 1.45;
+      }
+      .actions {
+        display: grid;
+        gap: 13px;
+        max-width: 420px;
+        margin: auto;
+      }
+      .btn {
+        text-decoration: none;
+        color: var(--ink);
+        font-weight: 700;
+        border: 2px solid var(--ink);
+        border-radius: 999px;
+        padding: 16px 20px;
+        transition:
+          0.2s transform,
+          0.2s background;
+      }
+      .btn:hover {
+        transform: translateY(-3px);
+      }
+      .btn.primary {
+        background: var(--ink);
+        color: #fff;
+        box-shadow: 5px 5px 0 var(--rose);
+      }
+      .btn.secondary {
+        background: var(--rose);
+      }
+      .note {
+        font-size: 0.72rem;
+        opacity: 0.7;
+        margin: 24px auto 0;
+        max-width: 270px;
+      }
+      .footer-disco {
+        position: relative;
+        width: 110px;
+        height: 110px;
+        margin: 44px auto 0;
+      }
+      .footer-disco:before {
+        content: '';
+        position: absolute;
+        width: 1px;
+        height: 45px;
+        background: #555;
+        left: 55px;
+        top: -43px;
+      }
+      @media (max-width: 410px) {
+        .page {
+          padding-inline: 16px;
+        }
+        .d1 {
+          left: -58px;
+        }
+        .d2 {
+          right: -36px;
+        }
+        .calendar {
+          margin-top: 270px;
+        }
+        .details {
+          grid-template-columns: 1fr;
+        }
+        .pink-hat {
+          font-size: 2.45rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sparkles"></div>
+    <main class="page">
+      <div class="disco d1"></div>
+      <div class="disco d2"></div>
+      <div class="disco d3"></div>
+      <div class="disco d4"></div>
+      <span class="star s1">✦</span><span class="star s2">✦</span><span class="star s3">✦</span>
+      <p class="eyebrow">YOU'RE INVITED</p>
+      <h1>
+        <span><i class="pink-hat">🪩</i>ARI</span><span>FEST</span>
+      </h1>
+      <p class="sub">MIS QUINCE AÑOS</p>
+      <p class="intro">La pista se enciende y quiero celebrar esta noche inolvidable contigo.</p>
+      <section class="calendar" aria-label="Calendario de la fiesta">
+        <div class="cal-top"><span>OCTUBRE</span><b>2027</b><span>✦</span></div>
+        <div class="cal-grid">
+          <span class="weekday">LU</span><span class="weekday">MA</span
+          ><span class="weekday">MI</span><span class="weekday">JU</span
+          ><span class="weekday">VI</span><span class="weekday">SA</span
+          ><span class="weekday">DO</span> <span></span><span></span><span></span><span></span
+          ><span class="date">1</span><span class="date">2</span><span class="date">3</span>
+          <span class="date">4</span><span class="date">5</span><span class="date">6</span
+          ><span class="date">7</span><span class="date">8</span><span class="date">9</span
+          ><span class="date">10</span> <span class="date">11</span><span class="date">12</span
+          ><span class="date">13</span><span class="date">14</span><span class="date">15</span
+          ><span class="date">16</span><span class="date">17</span> <span class="date">18</span
+          ><span class="date">19</span><span class="date">20</span><span class="date">21</span
+          ><span class="date">22</span><span class="date">23</span
+          ><span class="date party">24</span> <span class="date">25</span
+          ><span class="date">26</span><span class="date">27</span><span class="date">28</span
+          ><span class="date">29</span><span class="date">30</span><span class="date">31</span>
+        </div>
+      </section>
+      <section class="event">
+        <h2>Una noche para brillar</h2>
+        <p class="time">SÁBADO · 24 DE OCTUBRE · 8:00 P. M.</p>
+        <div class="divider"></div>
+      </section>
+      <section class="details">
+        <article class="detail">
+          <h3>📍 UBICACIÓN</h3>
+          <p>Salón por confirmar<br /><small>Arequipa, Perú</small></p>
+        </article>
+        <article class="detail">
+          <h3>✦ DRESS CODE</h3>
+          <p>Disco glam<br /><small>¡Ven a brillar!</small></p>
+        </article>
+      </section>
+      <section class="actions" aria-label="Acciones de invitación">
+        <a
+          class="btn primary"
+          href="https://wa.me/51999999999?text=%C2%A1Hola!%20Confirmo%20mi%20asistencia%20a%20los%2015%20de%20Ari%20%F0%9F%AA%A9"
+          target="_blank"
+          rel="noreferrer"
+          >CONFIRMAR POR WHATSAPP</a
+        >
+        <a
+          class="btn secondary"
+          href="https://maps.google.com/?q=Arequipa,Peru"
+          target="_blank"
+          rel="noreferrer"
+          >VER UBICACIÓN</a
+        >
+        <a
+          class="btn"
+          href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=ARI+FEST+-+Mis+15+a%C3%B1os&dates=20271025T010000Z/20271025T060000Z&details=Una+noche+para+brillar"
+          target="_blank"
+          rel="noreferrer"
+          >AGREGAR AL CALENDARIO</a
+        >
+      </section>
+      <p class="note">Guarda la fecha y prepárate para bailar toda la noche. ✦</p>
+      <div class="disco footer-disco"></div>
+    </main>
+  </body>
+</html>
