@@ -273,6 +273,31 @@
       .scene-title small { margin-top: 4px; font-size: 1.4rem; }
       .mini-disco { right: 50px; bottom: 111px; width: 69px; height: 69px; }
       .mini-disco::after { inset: 18px 0; }
+      .festival-title { margin: 6px 0 18px; color: #171519; font-family: 'Bodoni Moda', serif; font-size: clamp(2.6rem, 13vw, 4.1rem); line-height: .78; letter-spacing: -.08em; }
+      .festival-title small { display: block; margin-top: 11px; color: #d990ae; font-family: 'DM Sans', sans-serif; font-size: .58rem; letter-spacing: .32em; }
+      .calendar { display: block; margin: 20px auto 18px; }
+      .memories { height: 475px; background: radial-gradient(circle at 71% 19%, #ffbed6 0 7%, transparent 7.4%), radial-gradient(circle at 24% 16%, #88e7e0 0 9%, transparent 9.4%), radial-gradient(circle at 77% 72%, #ffdf5e 0 10%, transparent 10.4%), linear-gradient(135deg, #5d328f, #ed7eaf 49%, #74dcd4); border: 3px solid #19131f; box-shadow: 9px 9px 0 #171519; }
+      .memories::before { content: '✦  ☮  ✦\A  ☼  ✦  ☮\A✦  ☼  ✦'; white-space: pre; width: auto; height: auto; left: 12px; top: 20px; border-radius: 0; background: none; color: #fff6bd; font-size: 28px; line-height: 2.55; letter-spacing: 46px; opacity: .82; box-shadow: none; text-shadow: 2px 2px #e45392; }
+      .memories::after { content: '●  ●\A ●  ●  ●\A  ●  ●'; right: 11px; top: 14px; color: #ffb3d4; font-size: 38px; line-height: .85; letter-spacing: -9px; opacity: .9; text-shadow: 2px 2px #73458c; transform: rotate(13deg); }
+      .memory { overflow: visible; background: transparent; border: 0; box-shadow: none; }
+      .memory:first-child { width: 190px; height: 270px; left: 75px; top: 74px; border: 0; border-radius: 0; }
+      .memory:nth-child(2) { width: 212px; height: 165px; left: 8px; right: auto; bottom: 4px; border: 0; border-radius: 0; box-shadow: none; transform: rotate(-5deg); }
+      .memory:first-child::before { display: none; }
+      .memory img { object-fit: contain; filter: none; }
+      .scene-title { bottom: 111px; left: 205px; right: auto; color: #fff5ba; font-size: 2.5rem; text-shadow: 3px 3px 0 #bd3e83, -1px -1px 0 #45216e; transform: rotate(-7deg); }
+      .scene-title small { color: #ffcae0; font-size: 1.55rem; }
+      .mini-disco { right: 14px; bottom: 19px; width: 94px; height: 94px; background: conic-gradient(#fff,#76747e,#fafafa,#403c51,#fff); border: 3px solid #f5c4d8; box-shadow: 3px 3px 0 #45216e; }
+      .mini-disco::after { inset: 27px 0; }
+      .page::after { content: '✦  ☾  ✦  ☮  ✦'; position: absolute; z-index: -1; inset: 380px -55px auto; color: #c380e0; font-size: 1.45rem; letter-spacing: 21px; transform: rotate(-8deg); opacity: .72; }
+      .memories { background: radial-gradient(ellipse at 25% 18%, #ffd3e7 0 4%, transparent 5%), radial-gradient(ellipse at 80% 85%, #b9f7df 0 5%, transparent 6%), repeating-radial-gradient(ellipse at 46% 55%, #d28ad1 0 4px, #f9b6d4 5px 14px, #9c75dc 15px 18px, #d5f6f2 19px 28px); border: 3px solid #f6e5ff; box-shadow: 7px 8px 0 #aa73ce; }
+      .memories::before { left: -25px; top: 15px; width: 91px; height: 91px; background: conic-gradient(#ffe570,#ff75ba,#8d65ee,#62e4d5,#ffe570); box-shadow: inset 0 0 0 8px #f7ddff, 0 0 18px #d054e5; }
+      .memories::after { content: '✦  ✦\A  ● ●\A ✦   ●'; right: 11px; top: 42px; color: #ffed7a; font-size: 38px; letter-spacing: -8px; text-shadow: 0 0 8px #f23acb; }
+      .memory:first-child { width: 178px; height: 259px; left: 78px; top: 72px; border: 0; border-radius: 0; box-shadow: 0 7px 20px #50265a77; background: transparent; }
+      .memory:nth-child(2) { width: 135px; height: 128px; right: -8px; bottom: -2px; border: 0; border-radius: 0; box-shadow: none; background: transparent; }
+      .memory:first-child::before { display: none; }
+      .memory img { object-fit: contain; filter: drop-shadow(2px 4px 2px #52365e88); }
+      .scene-title { bottom: 51px; color: #fff6a5; text-shadow: 2px 3px 0 #de438e, -2px -1px 0 #634bc7, 0 0 14px #fff; transform: rotate(-4deg); }
+      .mini-disco { right: 7px; bottom: 116px; width: 75px; height: 75px; background: conic-gradient(#fff,#ffb9e2,#70e5de,#9380ef,#fff); box-shadow: inset 0 0 0 7px #f8e9ff, 0 0 14px #e24ddd; }
       .event {
         margin: 42px auto 0;
         padding: 0 8px;
@@ -398,6 +423,7 @@
       <div class="disco d3"></div>
       <div class="disco d4"></div>
       <span class="star s1">✦</span><span class="star s2">✦</span><span class="star s3">✦</span>
+      <h1 class="festival-title">ARI FEST<small>MIS QUINCE AÑOS</small></h1>
       <p class="invitation-copy">Con la bendición de Dios y de mis padres tengo el honor de invitarte a celebrar<br /><b>mis XV años.</b></p>
       <section class="date-panel" aria-label="Fecha de la celebración">
         <p class="month">NOVIEMBRE</p>
@@ -431,12 +457,22 @@
         <div>Salón de eventos</div>
       </section>
       <section class="memories" aria-label="Recuerdos de Ari">
-        <figure class="memory"><img src="assets/ari-recuerdo-1.png" alt="Ari de niña" /></figure>
-        <figure class="memory"><img src="assets/ari-recuerdo-2.png" alt="Ari de niña jugando" /></figure>
+        <figure class="memory"><img src="assets/ari-cutout-standing.png" alt="Ari de niña" /></figure>
+        <figure class="memory"><img src="assets/ari-cutout-play.png" alt="Ari de niña jugando" /></figure>
         <span class="scene-title">ARI<small>15</small></span>
         <span class="mini-disco" aria-hidden="true"></span>
       </section>
       <p class="family"><small>CON EL CARIÑO DE SUS PADRES</small>Gabriela Escobedo Tapia<br />Christian Tagle Cabrera</p>
+      <section class="details">
+        <article class="detail">
+          <h3>✦ DRESS CODE</h3>
+          <p>Disco glam<br /><small>¡Ven a brillar!</small></p>
+        </article>
+        <article class="detail">
+          <h3>🪩 LA NOCHE</h3>
+          <p>Música y baile<br /><small>Una fiesta para recordar</small></p>
+        </article>
+      </section>
       <section class="actions" aria-label="Acciones de invitación">
         <a
           class="btn primary"
