@@ -46,3 +46,30 @@ updateCountdown(); setInterval(updateCountdown, 1000);
 
 const days = document.getElementById('calendar-days');
 for (let day = 1; day <= 30; day++) { const el = document.createElement('span'); el.textContent = day; if (day === 14) el.className = 'selected'; days.append(el); }
+
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+let autoScrollPausedUntil = Date.now() + 1800;
+let previousFrameTime = 0;
+
+function pauseAutoScroll() {
+  autoScrollPausedUntil = Date.now() + 7000;
+}
+
+function autoScroll(timestamp) {
+  if (!previousFrameTime) previousFrameTime = timestamp;
+  const elapsed = timestamp - previousFrameTime;
+  previousFrameTime = timestamp;
+  const maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+  if (!reducedMotion.matches && maxScroll > 0 && Date.now() > autoScrollPausedUntil) {
+    if (window.scrollY >= maxScroll - 1) {
+      autoScrollPausedUntil = Date.now() + 2500;
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      window.scrollBy(0, elapsed * 0.022);
+    }
+  }
+  window.requestAnimationFrame(autoScroll);
+}
+
+['touchstart', 'pointerdown', 'wheel', 'keydown'].forEach((eventName) => window.addEventListener(eventName, pauseAutoScroll, { passive: true }));
+window.requestAnimationFrame(autoScroll);
