@@ -24,6 +24,21 @@ function updatePlayer(playing) {
   toggle.setAttribute('aria-pressed', String(playing));
   state.textContent = '';
 }
+
+async function startMusic() {
+  try {
+    await audio.play();
+    updatePlayer(true);
+  } catch {
+    updatePlayer(false);
+  }
+}
+
+startMusic();
+document.addEventListener('pointerdown', () => {
+  if (audio.paused) startMusic();
+}, { once: true });
+
 toggle.addEventListener('click', async () => {
   if (audio.paused) { try { await audio.play(); updatePlayer(true); } catch { state.textContent = 'No se pudo iniciar el audio.'; } }
   else { audio.pause(); updatePlayer(false); }
