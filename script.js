@@ -51,7 +51,7 @@ const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 const scrollToggle = document.getElementById('scroll-toggle');
 const scrollToggleLabel = document.getElementById('scroll-toggle-label');
 let autoScrollEnabled = true;
-let autoScrollPausedUntil = Date.now() + 1800;
+let autoScrollPausedUntil = Date.now() + 350;
 let previousFrameTime = 0;
 
 function updateScrollToggle() {
@@ -71,10 +71,10 @@ function autoScroll(timestamp) {
   const maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
   if (autoScrollEnabled && !reducedMotion.matches && maxScroll > 0 && Date.now() > autoScrollPausedUntil) {
     if (window.scrollY >= maxScroll - 1) {
-      autoScrollPausedUntil = Date.now() + 2500;
+      autoScrollPausedUntil = Date.now() + 1200;
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
-      window.scrollBy(0, elapsed * 0.022);
+      window.scrollBy(0, elapsed * 0.055);
     }
   }
   window.requestAnimationFrame(autoScroll);
