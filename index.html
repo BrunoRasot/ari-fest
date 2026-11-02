@@ -7,7 +7,10 @@
     <title>Ari Fest · Mis quince años</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Great+Vibes&family=Oswald:wght@400;500;600&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Great+Vibes&family=Oswald:wght@400;500;600&family=Playfair+Display:wght@700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -22,14 +25,42 @@
       </section>
 
       <section class="music" aria-label="Reproductor de música">
-        <audio id="party-song" src="music/boggie.mp3" loop preload="auto" autoplay></audio>
+        <audio
+          id="party-song"
+          src="music/Moonlight%20-%20Ariana%20Grande.mp3"
+          loop
+          preload="auto"
+          autoplay
+        ></audio>
         <img class="music-controls-art" src="assets/music-controls.png" alt="" aria-hidden="true" />
         <div class="player-controls">
-          <button class="control restart" id="restart-button" type="button" aria-label="Reiniciar canción"></button>
-          <button class="control previous" type="button" aria-label="Volver al inicio de la canción"></button>
-          <button class="player-button" id="audio-toggle" type="button" aria-label="Reproducir música" aria-pressed="false"><span id="play-icon" aria-hidden="true"></span></button>
+          <button
+            class="control restart"
+            id="restart-button"
+            type="button"
+            aria-label="Reiniciar canción"
+          ></button>
+          <button
+            class="control previous"
+            type="button"
+            aria-label="Volver al inicio de la canción"
+          ></button>
+          <button
+            class="player-button"
+            id="audio-toggle"
+            type="button"
+            aria-label="Reproducir música"
+            aria-pressed="false"
+          >
+            <span id="play-icon" aria-hidden="true"></span>
+          </button>
           <button class="control next" type="button" aria-label="Avanzar canción"></button>
-          <button class="control repeat" id="repeat-button" type="button" aria-label="Activar o desactivar repetición"></button>
+          <button
+            class="control repeat"
+            id="repeat-button"
+            type="button"
+            aria-label="Activar o desactivar repetición"
+          ></button>
         </div>
         <p id="audio-state" aria-live="polite"></p>
       </section>
@@ -44,32 +75,118 @@
 
       <section class="details">
         <img class="glass" src="assets/blessing-glass.png" alt="Copa decorativa" />
-        <p class="blessing">Con la bendición de Dios y de mis padres,<br /><span class="parents">Gabriela Escobedo Tapia y Christian Tagle Cabrera</span>,<br />tengo el honor de invitarte a celebrar<br /><strong>mis XV años</strong></p>
+        <p class="blessing">
+          Con la bendición de Dios y de mis padres,<br /><span class="parents"
+            >Gabriela Escobedo Tapia y Christian Tagle Cabrera</span
+          >,<br />tengo el honor de invitarte a celebrar<br /><strong>mis XV años</strong>
+        </p>
         <p class="month">NOVIEMBRE</p>
-        <div class="date-row"><div><span>SÁBADO</span></div><b>14</b><div><span>2026</span></div></div>
+        <div class="date-row">
+          <div><span>SÁBADO</span></div>
+          <b>14</b>
+          <div><span>2026</span></div>
+        </div>
         <p class="faltan">Faltan</p>
-        <div class="countdown" aria-live="polite"><strong id="countdown">00:00:00:00</strong><small>Días&nbsp;&nbsp;&nbsp;&nbsp; Horas&nbsp;&nbsp;&nbsp;&nbsp; Min&nbsp;&nbsp;&nbsp;&nbsp; Seg</small></div>
+        <div class="countdown" aria-live="polite">
+          <strong id="countdown">00:00:00:00</strong
+          ><small
+            >Días&nbsp;&nbsp;&nbsp;&nbsp; Horas&nbsp;&nbsp;&nbsp;&nbsp; Min&nbsp;&nbsp;&nbsp;&nbsp;
+            Seg</small
+          >
+        </div>
         <div class="calendar" aria-label="Calendario de noviembre de 2026">
           <header><small>NOVIEMBRE</small><small>2026</small></header>
-          <div class="week"><span>DOM</span><span>LUN</span><span>MAR</span><span>MIÉ</span><span>JUE</span><span>VIE</span><span>SÁB</span></div>
+          <div class="week">
+            <span>DOM</span><span>LUN</span><span>MAR</span><span>MIÉ</span><span>JUE</span
+            ><span>VIE</span><span>SÁB</span>
+          </div>
           <div class="days" id="calendar-days"></div>
         </div>
       </section>
 
       <section class="venue">
-        <img class="venue-composition" src="assets/venue-reference.png" alt="Recepción: 22:00 hrs, Salón de eventos" />
-        <div class="glass-stage" aria-label="Copas brindando"><img class="glass-left" src="assets/champagne-glass.png" alt="" /><img class="glass-right" src="assets/champagne-glass.png" alt="" /></div>
-        <img class="venue-stars venue-stars-top" src="assets/stars-venue-top.png" alt="" aria-hidden="true" />
-        <img class="venue-stars venue-stars-bottom" src="assets/stars-venue-bottom.png" alt="" aria-hidden="true" />
-        <a class="location-link" href="https://maps.app.goo.gl/2P2xjvikCidjTvCx7" target="_blank" rel="noopener" aria-label="Ver ubicación en Google Maps"></a>
+        <img
+          class="venue-composition"
+          src="assets/venue-reference.png"
+          alt="Recepción: 21:00 hrs, Salón de eventos"
+        />
+        <div class="glass-stage" aria-label="Copas brindando">
+          <img class="glass-left" src="assets/champagne-glass.png" alt="" /><img
+            class="glass-right"
+            src="assets/champagne-glass.png"
+            alt=""
+          />
+        </div>
+        <img
+          class="venue-stars venue-stars-top"
+          src="assets/stars-venue-top.png"
+          alt=""
+          aria-hidden="true"
+        />
+        <img
+          class="venue-stars venue-stars-bottom"
+          src="assets/stars-venue-bottom.png"
+          alt=""
+          aria-hidden="true"
+        />
+        <p class="venue-time">21:00 hrs</p>
+        <a
+          class="location-link"
+          href="https://maps.app.goo.gl/2P2xjvikCidjTvCx7"
+          target="_blank"
+          rel="noopener"
+          aria-label="Ver ubicación en Google Maps"
+        ></a>
       </section>
 
       <section class="expectation"><p>Te esperamos</p></section>
-      <section class="dress"><img src="assets/dresscode.png" alt="Código de vestimenta" /><p>Temática Disco<br />Ropa de colores negro, plateado, dorado y otros<br />colores de acuerdo a la temática.</p><img class="bow-divider bow-bottom" src="assets/bow-divider.png" alt="" aria-hidden="true" /></section>
-      <section class="rsvp"><img class="message" src="assets/message-icon.png" alt="" aria-hidden="true" /><a id="rsvp-button" href="https://wa.me/51954719375?text=%C2%A1Hola%21%20Confirmo%20mi%20asistencia%20a%20los%20XV%20a%C3%B1os%20de%20Ari.%20%C2%A1Ser%C3%A1%20un%20gusto%20celebrar%20contigo%21" target="_blank" rel="noopener">CONFIRMAR TU ASISTENCIA</a></section>
-      <footer><img class="purple-star" src="assets/purple-star.png" alt="" aria-hidden="true" /><img class="dog" src="assets/perrito.png" alt="Figura de perro de globos plateado" /><img class="kiss" src="assets/kiss.png" alt="" aria-hidden="true" /></footer>
+      <section class="dress">
+        <img src="assets/dresscode.png" alt="Código de vestimenta" />
+        <p>
+          Temática Disco<br />Ropa de colores negro, plateado, dorado y otros<br />colores de
+          acuerdo a la temática.
+        </p>
+        <img
+          class="bow-divider bow-bottom"
+          src="assets/bow-divider.png"
+          alt=""
+          aria-hidden="true"
+        />
+      </section>
+      <section class="gift" aria-label="Regalo mediante Yape">
+        <p class="gift-title">Un detalle con cariño</p>
+        <p class="gift-message">
+          Tu presencia es mi regalo favorito. Pero si deseas tener un detallito conmigo,
+          puedes enviarme un Yape con mucho cariño. ¡Gracias por ser parte de mi noche!
+        </p>
+        <img class="yape-qr" src="assets/yape-qr.png" alt="Código QR de Yape para regalo" />
+      </section>
+      <section class="rsvp">
+        <img class="message" src="assets/message-icon.png" alt="" aria-hidden="true" /><a
+          id="rsvp-button"
+          href="https://wa.me/51999380944?text=%C2%A1Hola%21%20Confirmo%20mi%20asistencia%20a%20los%20XV%20a%C3%B1os%20de%20Ari.%20%C2%A1Ser%C3%A1%20un%20gusto%20celebrar%20contigo%21"
+          target="_blank"
+          rel="noopener"
+          >CONFIRMAR TU ASISTENCIA</a
+        >
+      </section>
+      <footer>
+        <img class="purple-star" src="assets/purple-star.png" alt="" aria-hidden="true" /><img
+          class="dog"
+          src="assets/perrito.png"
+          alt="Figura de perro de globos plateado"
+        /><img class="kiss" src="assets/kiss.png" alt="" aria-hidden="true" />
+      </footer>
     </main>
-    <button class="scroll-toggle" id="scroll-toggle" type="button" aria-pressed="true" aria-label="Pausar desplazamiento automático"><span>↕</span><b id="scroll-toggle-label">Auto</b></button>
+    <button
+      class="scroll-toggle"
+      id="scroll-toggle"
+      type="button"
+      aria-pressed="true"
+      aria-label="Pausar desplazamiento automático"
+    >
+      <span>↕</span><b id="scroll-toggle-label">Auto</b>
+    </button>
     <script src="script.js"></script>
   </body>
 </html>

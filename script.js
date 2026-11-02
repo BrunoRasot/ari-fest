@@ -5,7 +5,7 @@ const state = document.getElementById('audio-state');
 
 function fitInvitationToMobile() {
   const artboardWidth = 328;
-  const artboardHeight = 2501;
+  const artboardHeight = 2851;
   if (window.innerWidth <= 480) {
     const scale = window.innerWidth / artboardWidth;
     document.documentElement.style.setProperty('--invitation-scale', scale);
@@ -50,7 +50,7 @@ document.getElementById('repeat-button').addEventListener('click', (event) => {
   event.currentTarget.style.opacity = audio.loop ? '1' : '.45';
 });
 
-const target = new Date('2026-11-14T22:00:00-05:00');
+const target = new Date('2026-11-14T21:00:00-05:00');
 function updateCountdown() {
   const remaining = Math.max(0, target - new Date());
   const seconds = Math.floor(remaining / 1000);
